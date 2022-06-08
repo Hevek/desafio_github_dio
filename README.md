@@ -1,2 +1,3 @@
 # desafio_github_dio
-modelo de organização de pastas
+
+> Repositório com os xercícios feitos nos programas da dio
