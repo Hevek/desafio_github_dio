@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex-basis</title>
+</head>
+<style>
+    .container{
+        max-width: 500px;
+        border: 1px solid white;
+        display: flex;
+    }
+
+    .item{
+        background-color: coral;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        margin: 5px;
+    }
+
+    .basis-auto{
+        flex-basis: auto;
+    }
+
+    .basis-0{
+        flex-basis: 0;
+    }
+    
+    .basis-100{
+        flex-basis: 100px;
+    }
+
+    .grow-1{
+        flex-grow: 1;
+    }
+
+    .grow-2{
+        flex-grow: 2;
+    }
+
+    .grow-7{
+        flex-grow: 7;
+    }
+</style>
+<body>
+    <h2>basis-auto</h2>
+    <div class="container">
+        <div class="item basis-auto grow-1">Attack</div>
+        <div class="item basis-auto grow-2">Basis</div>
+        <div class="item basis-auto grow-1">Caution (attention)</div>
+        <div class="item basis-auto grow-7">DEF</div>
+    </div>
+
+    <h2>basis-0</h2>
+    <div class="container">
+        <div class="item basis-0 grow-1">Attack</div>
+        <div class="item basis-0 grow-1">Basis</div>
+        <div class="item basis-0 grow-1">Caution (attention)</div>
+        <div class="item basis-0 grow-1">DEF</div>
+    </div>
+
+    <h2>basis + width</h2>
+    <div class="container">
+        <div class="item basis-100 grow-1">Attack</div>
+        <div class="item basis-100 grow-1">Basis</div>
+        <div class="item basis-100 grow-1">Caution (attention)</div>
+        <div class="item basis-100">DEF</div>
+        <!-- O item sem o "grow-1" não vai aumentar ao tamanho dos seus irmãos, permitindo
+        se encaixar no container com um tamanho menor. O uso desses valores acredito
+        que seja bem intuitivo -->
+    </div>
+</body>
+</html>

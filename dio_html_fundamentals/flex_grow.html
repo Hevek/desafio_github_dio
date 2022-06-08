@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex-grow</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        border: 2px solid white;
+        max-width: 300px;
+        justify-content: center;
+    }
+
+    .item{
+        background-color: orangered;
+        margin: 5px;
+        padding: 10px;
+        text-align: center;
+        color: white;
+    }
+
+    .grow-0{
+        flex-grow: 0;
+    }
+
+    .grow-1{
+        flex-grow: 1;
+    }
+
+    .grow-2{
+        flex-grow: 2;
+    }
+
+    .grow-5{
+        flex-grow: 5;
+    }
+
+    .grow-7{
+        flex-grow: 7;
+    }
+</style>
+<body>
+    <h2>grow 0</h2>
+    <!-- Esse é o único afetado pelo "justify-content", já que o grow dele é zero -->
+    <div class="container">
+        <div class="item grow-0">A</div>
+        <div class="item grow-0">B</div>
+        <div class="item grow-0">C</div>
+        <div class="item grow-0">D</div>
+        <!-- Você pode alterar os valores conforme a necessidade -->
+    </div>
+
+    <h2>grow 1</h2>
+    <div class="container">
+        <div class="item grow-1">A</div>
+        <div class="item grow-1">B</div>
+        <div class="item grow-1">C</div>
+        <div class="item grow-1">D</div>
+    </div>
+
+    <h2>diversos</h2>
+    <div class="container">
+        <div class="item grow-5">A</div>
+        <div class="item grow-2">B</div>
+        <div class="item grow-7">C</div>
+        <div class="item grow-1">DD</div>
+    </div>
+</body>
+</html>
