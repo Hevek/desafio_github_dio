@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align-items</title>
+</head>
+<style>
+    .container{
+        max-width: 350px;
+        border: 1px solid white;
+        display: flex;
+    }
+
+    .item{
+        background-color: blueviolet;
+        margin: 5px;
+        color: white;
+        text-align: center;
+        flex: 1;
+    }
+
+    .flex{
+        flex: 1;
+    }
+
+    .center{
+        align-items: center;
+    }
+
+    .stretch{
+        align-items: stretch;
+    }
+
+    .flex-start{
+        align-items: flex-start;
+    }
+
+    .flex-end{
+        align-items: flex-end;
+    }
+
+    .baseline{
+        align-items: baseline;
+    }
+
+    .column{
+        flex-direction: column;
+    }
+
+    .central{
+        height: 300px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .central .item{
+        flex: 0;
+        padding: 5px;
+    }
+</style>
+<body>
+    <h1>Row</h1>
+    <div>
+        <h2>center</h2>
+        <section class="container center">
+            <div class="item">1</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">O atributo "flex: 1;", junto com o "align-items: center;"
+                 respeita sempre a margem dos itens horizontalmente, 
+                enquanto extende o container verticalmente para enquadrar o conteúdo do item</div>
+        </section>
+
+        <h2>stretch</h2>
+        <section class="container stretch">
+            <div class="item">1</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">No caso do atribulo "align-items: stretch;" ele "estica" 
+                (como o nome diz) os outros elementos "irmãos" para o mesmo tamanho do maior</div>
+        </section>
+
+        <h2>flex-start</h2>
+        <section class="container flex-start">
+            <div class="item">1</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">Nesse outro caso, todos os elementos se alinham ao topo</div>
+        </section>
+
+        <h2>flex-end</h2>
+        <section class="container flex-end">
+            <div class="item">1</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">Auto-explicativo, né?</div>
+        </section>
+
+        <h2>baseline</h2>
+        <section class="container baseline">
+            <div class="item"><br>1</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">Auto-explicativo, né?</div>
+        </section>
+    </div>
+    <h1>Column</h1>
+    <div>
+        <h2>center</h2>
+        <section class="container center column">
+            <div class="item">1</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">Centraliza verticalmente, agora que o "flex-direction" é "column".</div>
+        </section>
+
+        <h2>stretch</h2>
+        <section class="container stretch column">
+            <div class="item">1</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">No caso do atribulo "align-items: stretch;" ele "estica" 
+                (como o nome diz) os outros elementos "irmãos" para o mesmo tamanho do maior</div>
+        </section>
+
+        <h2>flex-start</h2>
+        <section class="container flex-start column">
+            <div class="item">1</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">Nesse outro caso, todos os elementos se alinham ao topo</div>
+        </section>
+
+        <h2>flex-end</h2>
+        <section class="container flex-end column">
+            <div class="item">1</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">Auto-explicativo, né?</div>
+        </section>
+
+        <h2>baseline</h2>
+        <section class="container baseline column central">
+            <div class="item">Parece que ele dá uma cortada nas margens</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">Na real não entendi completamente esse daqui</div>
+        </section>
+
+        <h2>alinhar ao centro</h2>
+        <section class="container central center">
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse posuere dignissim orci, vitae porta elit vestibulum eget.</div>
+        </section>
+    </div>
+</body>
+</html>
