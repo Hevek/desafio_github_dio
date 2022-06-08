@@ -1,3 +1,3 @@
 # desafio_github_dio
 
-> Repositório com os xercícios feitos nos programas da dio
+> Repositório com os exercícios feitos nos programas da dio
