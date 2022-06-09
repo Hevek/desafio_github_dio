@@ -15,7 +15,11 @@
     }
 
     .a-i-center{
-        /* align-items: center; */
+        align-items: flex-end;
+    }
+
+    .f-d-column{
+        flex-direction: column;
     }
 
     .item{
@@ -23,6 +27,7 @@
         color: white;
         font-size: 24px;
         text-align: center;
+        margin: 5px;
     }
 
     .center{
@@ -59,12 +64,47 @@
         <div class="item auto"> e item 5</div>
     </section>
 
+    <section class="container a-i-center">
+        <div class="item stretch">AAA</div>
+        <div class="item baseline">123</div>
+        <div class="item auto">Lorem ipsum dorem autorum centen dorep ilurum</div>
+        <div class="item start">Item 4</div>
+        <div class="item end">e item 5</div>
+    </section>
+
     <section class="container">
+        <div class="item stretch">AAA</div>
+        <div class="item baseline">123</div>
+        <div class="item auto">Lorem ipsum dorem autorum centen dorep ilurum</div>
+        <div class="item start">Item 4</div>
+        <div class="item end">AaAaAaAaAaAaAaAaAaAa</div>
+    </section>
+
+
+    <!-- Mesmo comportamento, em "flex-direction: column;" -->
+    <h2>align-self: auto;</h2>
+    <section class="container f-d-column a-i-center">
         <div class="item auto">AAA</div>
         <div class="item auto">123</div>
         <div class="item auto">Lorem ipsum dorem autorum centen dorep ilurum</div>
         <div class="item auto">Item 4</div>
         <div class="item auto"> e item 5</div>
+    </section>
+
+    <section class="container a-i-center f-d-column">
+        <div class="item stretch">AAA</div>
+        <div class="item baseline">123</div>
+        <div class="item auto">Lorem ipsum dorem autorum centen dorep ilurum</div>
+        <div class="item start">Item 4</div>
+        <div class="item end">e item 5</div>
+    </section>
+
+    <section class="container f-d-column">
+        <div class="item stretch">AAA</div>
+        <div class="item baseline">123</div>
+        <div class="item auto">Lorem ipsum dorem autorum centen dorep ilurum</div>
+        <div class="item start">Item 4</div>
+        <div class="item end">AaAaAaAaAaAaAaAaAaAa</div>
     </section>
 </body>
 </html>
