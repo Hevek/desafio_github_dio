@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align-items</title>
+</head>
+<style>
+    .container{
+        max-width: 350px;
+        margin: 1px solid white;
+        margin-bottom: 10px;
+        display: flex;
+    }
+
+    .a-i-center{
+        /* align-items: center; */
+    }
+
+    .item{
+        background-color: brown;
+        color: white;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .center{
+        align-self: center;
+    }
+
+    .start{
+        align-self: flex-start;
+    }
+
+    .end{
+        align-self: flex-end;
+    }
+
+    .baseline{
+        align-self: baseline;
+    }
+
+    .stretch{
+        align-self: stretch;
+    }
+
+    .auto{
+        align-self: auto;
+    }
+</style>
+<body>
+    <h2>align-self: auto;</h2>
+    <section class="container a-i-center">
+        <div class="item auto">AAA</div>
+        <div class="item auto">123</div>
+        <div class="item auto">Lorem ipsum dorem autorum centen dorep ilurum</div>
+        <div class="item auto">Item 4</div>
+        <div class="item auto"> e item 5</div>
+    </section>
+
+    <section class="container">
+        <div class="item auto">AAA</div>
+        <div class="item auto">123</div>
+        <div class="item auto">Lorem ipsum dorem autorum centen dorep ilurum</div>
+        <div class="item auto">Item 4</div>
+        <div class="item auto"> e item 5</div>
+    </section>
+</body>
+</html>

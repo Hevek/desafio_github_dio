@@ -8,22 +8,79 @@
 </head>
 <style>
     .container{
-
+        display: flex;
+        border: 1px solid white;
+        max-width: 350px;
     }
 
     .item{
+        margin: 5px;
+        background-color: blueviolet;
+        font-size: 24px;
+        text-align: center;
+    }
 
+    .grow-1{
+        flex-grow: 1;
     }
 
     .shrink-0{
         flex-shrink: 0;
+        flex-basis: 200px;
     }
 
     .shrink-1{
         flex-shrink: 1;
+        flex-basis: 100px;
     }
+    
+    .shrink-2{
+        flex-shrink: 2;
+        flex-basis: 100px;
+    }
+
+    .shrink-3{
+        flex-shrink: 3;
+        flex-basis: 100px;
+    }
+    /* O shrink é responsável por definir quanto o 
+    elemento pode se encolher para dar espaço aos outros
+    dentro do container. O basis é responsável por dizer
+    qual o tamanho mínimo desejável desse elemento. */
 </style>
 <body>
-    
+    <h2>shrink-1</h2>
+    <div class="container">
+        <div class="item shrink-1 grow-1">A</div>
+        <div class="item shrink-1 grow-1">B</div>
+        <div class="item shrink-1 grow-1">C</div>
+        <div class="item shrink-1 grow-1">D</div>
+        <div class="item shrink-1 grow-1">E</div>
+    </div>
+    <div class="container">
+        <div class="item shrink-1 grow-1">A</div>
+        <div class="item shrink-1 grow-1">B</div>
+        <div class="item shrink-1 grow-1">Lorem</div>
+        <div class="item shrink-1 grow-1">D</div>
+        <div class="item shrink-1 grow-1">E</div>
+    </div>
+
+    <h2>shrink-0 com basis 100px</h2>
+    <div class="container">
+        <div class="item shrink-0 grow-1">A</div>
+        <div class="item shrink-0 grow-1">B</div>
+        <div class="item shrink-0 grow-1">Lorem</div>
+        <div class="item shrink-0 grow-1">D</div>
+        <div class="item shrink-0 grow-1">E</div>
+    </div>
+
+    <h2>shrink-0 com basis 100px</h2>
+    <div class="container">
+        <div class="item shrink-1 grow-1">A</div>
+        <div class="item shrink-2 grow-1">B</div>
+        <div class="item shrink-0 grow-1">Lorem</div>
+        <div class="item shrink-1 grow-1">D</div>
+        <div class="item shrink-1 grow-1">E</div>
+    </div>
 </body>
 </html>
