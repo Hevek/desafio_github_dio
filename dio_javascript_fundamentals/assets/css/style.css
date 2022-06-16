@@ -1,0 +1,22 @@
+body{
+    background-color: #292929;
+    color: white;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.row{
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.row button{
+    margin-top: 10px;
+}
